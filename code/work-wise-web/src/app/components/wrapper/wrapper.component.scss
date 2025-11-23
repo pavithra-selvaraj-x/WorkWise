@@ -1,0 +1,74 @@
+@import "../../styles/theme";
+
+.wrapper-container {
+  height: 100vh;
+  overflow-y: auto;
+
+  .side-navigation {
+    width: 18rem;
+    background-color: $primaryColor;
+    color: $colorWhite;
+
+    .user-info {
+      padding: 2rem;
+      text-align: center;
+      .profile-picture {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+      }
+      .user-name {
+        display: block;
+        font-size: 1.2em;
+        margin-top: 0.8rem;
+      }
+      .user-email {
+        display: block;
+        font-size: 1em;
+        margin-top: 0.4rem;
+      }
+    }
+
+    .mat-nav-list {
+      padding: 0.7rem;
+      .mat-list-item {
+        margin-bottom: 0.5rem;
+        .menu-name {
+          color: $colorWhite;
+          font-size: 1rem;
+        }
+        &:hover {
+          background-color: $lavendar;
+          border-radius: 0.3rem;
+          .menu-name {
+            color: $colorBlack;
+          }
+        }
+        &.active {
+          background-color: $secondaryColor;
+          border-radius: 0.3rem;
+          .menu-name {
+            color: $colorBlack;
+          }
+        }
+      }
+    }
+
+    .logout-container {
+      position: absolute;
+      bottom: 0;
+      padding: 1rem 2rem;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .content-container {
+    padding: 1.5rem;
+    background-color: #f4f0f1;
+    height: calc(100vh - 3rem);
+    overflow-y: auto;
+  }
+}

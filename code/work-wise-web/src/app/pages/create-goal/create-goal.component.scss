@@ -1,0 +1,138 @@
+@import "../../styles/theme";
+
+.create-goal-wrapper {
+  .stepper-wrapper {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    &.mat-stepper-horizontal {
+      background-color: transparent;
+    }
+
+    .goal-form-container {
+      max-width: 100%;
+      background-color: $colorWhite;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+      .question {
+        margin-bottom: 1.5rem;
+      }
+      .question label {
+        font-weight: bold;
+        display: block;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+      }
+      mat-form-field {
+        width: 70%;
+      }
+      .mat-mdc-text-field-wrapper {
+        background-color: $colorWhite !important;
+      }
+    }
+  }
+}
+
+::ng-deep .mat-horizontal-stepper-header {
+  pointer-events: none !important;
+}
+
+.task-form-container {
+  margin: 0 auto;
+  .task-update-message {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    padding-bottom: 1.5rem;
+    font-style: italic;
+  }
+  .full-width {
+    width: 100%;
+  }
+  .half-width {
+    width: calc(50% - 0.8rem);
+    margin-right: 0.8rem;
+  }
+  .task-row {
+    margin-bottom: 1.2rem;
+    border: 0.1rem solid $secondaryColor;
+    background-color: $colorWhite;
+    padding: 1rem 1.5rem 0;
+    border-radius: 0.5rem;
+  }
+  .task-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .heading-label {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .task-content {
+    padding: 0.6rem 0;
+  }
+  .flex-container {
+    display: flex;
+    gap: 0.6rem;
+  }
+  .flex-item {
+    flex: 1;
+  }
+  .field-group {
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.confirmation-container {
+  background-color: $colorWhite;
+  padding: 0.5rem 1.5rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  .goal-confirm-message {
+    color: $primaryColor;
+    padding-bottom: 0.5rem;
+  }
+  .goal-details {
+    .goal-section {
+      margin-bottom: 1.5rem;
+      label {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .task-details {
+    padding-bottom: 1.5rem;
+    .task-table {
+      border: 1px solid $primaryColor;
+      width: 100%;
+      border-collapse: collapse;
+      th,
+      td {
+        padding: 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid $primaryColor;
+      }
+      th {
+        background-color: $primaryColor;
+        color: $colorWhite;
+      }
+      tbody tr:nth-child(even) {
+        background-color: #f4f0f1;
+      }
+      tbody tr:nth-child(odd) {
+        background-color: $secondaryLight;
+      }
+    }
+  }
+}
+
+button {
+  margin-right: 1rem;
+}

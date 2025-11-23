@@ -1,0 +1,56 @@
+@import "../../styles/theme";
+
+.login-page-wrapper {
+  display: flex;
+  height: 100vh;
+  background-color: $secondaryColor;
+  position: relative;
+  .logo-wrapper {
+    width: 50%;
+    .logo {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+    background-color: $primaryColor;
+    .login-header {
+      text-align: center;
+      color: $colorWhite;
+      padding-top: 5rem;
+      .login-title {
+        font-size: 1.5rem;
+      }
+      .login-text {
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+    }
+
+    .login-form {
+      width: 25rem;
+      background-color: $colorWhite;
+      padding: 2.5rem;
+      padding-top: 3.5rem;
+      border-radius: 0.8rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      .form-field {
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        .login-button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

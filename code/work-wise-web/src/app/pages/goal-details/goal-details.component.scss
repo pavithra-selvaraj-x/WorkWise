@@ -1,0 +1,53 @@
+@import "../../styles/theme";
+
+.goal-details-wrapper {
+  .goal-details-container {
+    .goal-form {
+      background-color: $colorWhite;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      .row {
+        display: flex;
+        align-items: center;
+        .form-group {
+          width: 47.3%;
+        }
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .task-details {
+      .task-list-heading-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 0 1.5rem;
+        .task-list-heading {
+          font-weight: 600;
+          color: $primaryColor;
+          font-size: 1.2rem;
+        }
+      }
+
+      .table-wrapper {
+        border-radius: 0.7rem;
+      }
+    }
+
+    .delete-goal-section {
+      border-top: 0.1rem solid $primaryDark;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+      padding-bottom: 1rem;
+      .warning-text {
+        color: $primaryColor;
+        padding-bottom: 1.5rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

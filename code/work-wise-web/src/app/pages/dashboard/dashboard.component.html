@@ -1,0 +1,86 @@
+<div class="dashboard-wrapper">
+  <div class="welcome-message-section">
+    <div class="welcome">
+      Welcome, <b>{{ authService.firstName }}</b
+      >!
+    </div>
+    <div class="tag-line">Let's make today productive.</div>
+  </div>
+
+  <ww-page-loader
+    loadingText="Please Wait, Loading Your Dashboard..."
+    *ngIf="isLoading"
+  />
+  <ng-container *ngIf="!isLoading">
+    <div class="row-wrapper">
+      <div class="chart-card">
+        <div class="chart-heading">Task Stats</div>
+        <div class="count-row">
+          <div class="count-title">Total Tasks</div>
+          <div class="count">
+            {{ dashboardInsights.task_insights.total_tasks }}
+          </div>
+        </div>
+        <div class="count-row">
+          <div class="count-title">Total Individual Tasks</div>
+          <div class="count">
+            {{ dashboardInsights.task_insights.individual_tasks_count }}
+          </div>
+        </div>
+        <div class="count-row">
+          <div class="count-title">Total Goal Tasks</div>
+          <div class="count">
+            {{ dashboardInsights.task_insights.goal_related_tasks_count }}
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-heading">Task Status</div>
+        <div class="task-status-chart">
+          <canvas id="task-status-chart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-heading">Goal Status</div>
+        <div class="goal-status-chart">
+          <canvas id="goal-status-chart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="row-wrapper">
+      <div class="chart-card">
+        <div class="chart-heading">Goal & Task Priorities</div>
+        <div class="priority-chart">
+          <canvas id="priority-chart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-heading">Insights</div>
+        <div
+          class="no-insights-container chart-heading"
+          *ngIf="
+            !dashboardInfo ||
+            !dashboardInfo.insights ||
+            dashboardInfo.insights.length === 0
+          "
+        >
+          No Insights Found...
+        </div>
+        <div
+          class="insights-list"
+          *ngIf="
+            dashboardInfo &&
+            dashboardInfo.insights &&
+            dashboardInfo.insights.length > 0
+          "
+        >
+          <div *ngFor="let insight of dashboardInfo.insights">
+            {{ insight }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
