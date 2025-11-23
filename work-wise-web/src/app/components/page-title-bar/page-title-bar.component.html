@@ -1,0 +1,20 @@
+<div class="page-title-bar-wrapper">
+  <div class="pageTitle">{{ pageTitle }}</div>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="onButtonPress()"
+    *ngIf="buttonText"
+  >
+    <mat-icon style="vertical-align: middle">{{ iconName }}</mat-icon>
+    {{ buttonText }}
+  </button>
+  <button
+    mat-icon-button
+    color="primary"
+    (click)="onClosePress()"
+    *ngIf="!buttonText && showClose"
+  >
+    <mat-icon>clear</mat-icon>
+  </button>
+</div>

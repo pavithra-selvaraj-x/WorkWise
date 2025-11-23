@@ -1,0 +1,6 @@
+Id,FirstName,LastName,Email,PhoneNumber,Role
+d0e96ca8-7a2f-41d0-84b8-0c0298208def,Admin,User,admin@company.com,1234567890,Admin
+02b70982-5007-4897-b9dd-8a3ac636fdd1,Pavithra,Selvaraj,pavithra@company.com,9876543210,User
+97fdcbd1-3c46-445e-a7b5-c3368a0ef148,Ben,Stone,benstone@company.com,6789054321,User
+ec337f44-c2d2-4d78-bf44-63d61dc4b159,Claire,Dunphy,claire@company.com,2345678029,User
+debff53f-bc6f-40c4-af83-f4146cbaa226,NoSecret,User,nosecret@company.com,1234567894,User

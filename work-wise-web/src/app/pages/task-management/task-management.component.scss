@@ -1,0 +1,40 @@
+@import "../../styles/theme";
+
+.task-management-wrapper {
+  .content-container {
+    height: 85vh;
+    overflow-y: auto;
+    margin-top: 1.5rem;
+    border-radius: 0.7rem;
+  }
+
+  .no-tasks-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .todo-list-image {
+      width: 40%;
+      height: 40%;
+      padding-bottom: 2rem;
+      padding-top: 3rem;
+    }
+    .no-task-text {
+      font-size: 1.2rem;
+      color: $primaryColor;
+      line-height: 3rem;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+
+  .dialog-container {
+    padding: 1rem;
+    .heading {
+      color: $primaryColor;
+    }
+    .message {
+      color: $primaryColor;
+    }
+  }
+}

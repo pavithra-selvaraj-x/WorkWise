@@ -1,0 +1,45 @@
+@import "../../styles/theme";
+
+.create-task-wrapper {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 101;
+  }
+  .create-task-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: calc(100% - 3rem);
+    background-color: $colorWhite;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 102;
+    padding: 1.5rem;
+    transition: transform 0.3s ease-out;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    .instruction-message {
+      font-size: 1.2rem;
+      padding: 1.5rem 0;
+      color: $primaryDark;
+    }
+
+    .task-form {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .button-container {
+      margin-top: 1rem;
+      width: 90%;
+    }
+  }
+}
